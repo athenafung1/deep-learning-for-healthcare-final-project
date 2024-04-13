@@ -61,7 +61,6 @@ def smiles2vector(s1, s2):
     return v_d
 
 #===== Datasets =====
-
 class sup_data(data.Dataset):
 
     def __init__(self, list_IDs, labels, df_ddi):
@@ -85,29 +84,6 @@ class sup_data(data.Dataset):
         y = self.labels[index]
         return v_d, y
     
-class sup_data_index(data.Dataset):
-
-    def __init__(self, list_IDs, labels, df_ddi):
-        'Initialization'
-        self.labels = labels
-        self.list_IDs = list_IDs
-        self.df = df_ddi
-        
-    def __len__(self):
-        'Denotes the total number of samples'
-        return len(self.list_IDs)
-
-    def __getitem__(self, index):
-        'Generates one sample of data'
-        # Select sample
-        # Load sample and get label
-        index = self.list_IDs[index]
-        s1 = self.df.iloc[index].Drug1_SMILES
-        s2 = self.df.iloc[index].Drug2_SMILES
-        v_d = smiles2vector(s1, s2)
-        y = self.labels[index]
-        return v_d, y, index
-
 class unsup_data(data.Dataset):
 
     def __init__(self, list_IDs, df):
