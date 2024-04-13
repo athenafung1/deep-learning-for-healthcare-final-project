@@ -1,4 +1,4 @@
-# CS 598: Deep Learning for Healthcare Final Project
+# CS 598: Deep Learning for Healthcare Final Project Branch
 
 In this final project, we will be exploring CASTER, a framework that predicts drug interactions with
 chemical substructure representations.
