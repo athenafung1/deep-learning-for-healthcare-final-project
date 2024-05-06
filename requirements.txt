@@ -1,0 +1,8 @@
+numpy
+torch
+subword_nmt
+codecs
+pandas
+scikit-learn
+tqdm
+matplotlib
