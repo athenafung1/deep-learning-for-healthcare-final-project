@@ -25,19 +25,16 @@ The authors of CASTER presented the following hypotheses:
 * CASTER’s sub-structure dictionary can help human operators better comprehend the final result.
 
 ## Ablations Planned
-We plan to attempt two ablations on the CASTER model:
- 
-1. Replacement of the deep predictor of the functional representation with a logistic regression.
+Replacement of the deep predictor of the functional representation with a logistic regression.
 The molecule’s functional representation (sub-structured/post pattern mining) is fed through the deep predictor. The logistic regression model, though far lighter in parameter count, was not chosen due its weaker performance. We’d like to replicate and verify this by replacing the deep predictor with a logistic regression model.
-2. Retraining after the removal/minimization of the unlabelled molecule dataset.
-CASTER claims and shows that the inclusion of unlabelled data for better frequent sub-structure generation leads to an improved model performance. To verify this, we would like to restrict the size of / remove the unlabelled dataset from the training process and verify that performance does indeed decrease.
+
 
 ## Data
 Since CASTER’s code repository already contains the needed data, we will access it there:
 https://github.com/kexinhuang12345/CASTER/tree/master/DDE/data
 
 ## Computation Feasibility
-According to the paper, the authors used “... a server with 2 Intel Xeon E5-2670v2 2.5GHz CPUs, 128 GB RAM and 3 NVIDIA Tesla K80 GPUs.”. While we don’t have the same amount of memory nor GPUs, this is by no means an unreasonable amount of processing power, considering the speed of more modern hardware. If need arises, we have access to typical cloud compute services, like AWS, GC, or Azure.
+According to the paper, the authors used “... a server with 2 Intel Xeon E5-2670v2 2.5GHz CPUs, 128 GB RAM and 3 NVIDIA Tesla K80 GPUs.”. While we don’t have the same amount of memory nor GPUs, this is by no means an unreasonable amount of processing power, considering the speed of more modern hardware.
 
 
 ### Authors
